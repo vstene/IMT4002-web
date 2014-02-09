@@ -2,7 +2,7 @@
 
 angular.module('reporter.controllers', []);
 
-angular.module('ReporterCtrl', ['ionic', 'reporter.controllers'])
+angular.module('FieldReporter', ['ionic', 'reporter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('home', {
