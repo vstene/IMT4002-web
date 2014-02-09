@@ -1,3 +1,5 @@
+'use strict';
+
 // Include gulp
 var gulp = require('gulp');
 
@@ -8,7 +10,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var livereload = require('gulp-livereload');
-var watch = require('gulp-watch');
 
 // Lint Task
 gulp.task('lint', function() {
