@@ -1,0 +1,31 @@
+{
+  "name": "imt-4002-web",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vstene/IMT4002-Project"
+  },
+  "keywords": [
+    "imt4002"
+  ],
+  "author": "Vegard Stene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vstene/IMT4002-Project/issues"
+  },
+  "homepage": "https://github.com/vstene/IMT4002-Project",
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-rename": "~1.0.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-jshint": "~1.4.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-sass": "~0.6.0",
+    "gulp-livereload": "~1.0.1",
+    "gulp-watch": "~0.5.0"
+  }
+}
