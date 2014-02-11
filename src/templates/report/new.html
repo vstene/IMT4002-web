@@ -1,0 +1,43 @@
+<view title="'Home'" left-buttons="leftButtons">
+    <header-bar title="'New Field Report'"
+        type="bar-dark"
+        align-title="center"
+        left-buttons="leftButtons"></header-bar>
+
+    <content has-header="true" padding="true">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" placeholder="Title">
+            </label>
+            <label class="item item-input">
+                <span class="input-label" style="flex: 1 0 50px;">Date</span>
+                <input type="date" value="2013-02-11">
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="Report" rows="10"></textarea>
+            </label>
+        </div>
+        <div class="list attachments">
+            <div class="row item item-divider">
+                <div class="col col-90">Attachments</div>
+                <div class="col col-10">
+                    <i class="icon ion-plus"></i>
+                     <input type="file" ng-file-select="onFileSelect($files)">
+                </div>
+            </div>
+            <list show-delete="true">
+                <item ng-repeat="file in attachments" show-delete="true" can-delete="true" on-delete="deleteFile(file)">
+                    {{ file.name }}
+                </item>
+            </list>
+        </div>
+        <div class="row padding">
+            <div class="col col-50">
+                <button class="button button-block button-positive">Save</button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-assertive">Reset</button>
+            </div>
+        </div>
+    </content>
+</view>

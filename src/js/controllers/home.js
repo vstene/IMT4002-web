@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('reporter.controllers', [])
-.controller('HomeCtrl', function($scope) {
-    console.log('home controller');
+angular.module('reporter.controllers')
+.controller('HomeCtrl', function($scope, $state) {
     $scope.leftButtons = [{
-        type: 'button-light icon ion-plus medium',
-        tap: function(e) {
+        type: 'button-icon ion-plus',
+        tap: function() {
+            $state.go('report-new');
         }
     }];
 });
