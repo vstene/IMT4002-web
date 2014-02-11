@@ -7,14 +7,14 @@
     <content has-header="true" padding="true">
         <div class="list list-inset">
             <label class="item item-input">
-                <input type="text" placeholder="Title">
+                <input type="text" placeholder="Title" ng-model="report.title" ng-change="saveUnfinishedFieldReport()">
             </label>
             <label class="item item-input">
                 <span class="input-label" style="flex: 1 0 50px;">Date</span>
-                <input type="date" value="2013-02-11">
+                <input type="date" ng-model="report.date" ng-change="saveUnfinishedFieldReport()">
             </label>
             <label class="item item-input">
-                <textarea placeholder="Report" rows="10"></textarea>
+                <textarea placeholder="Report" rows="10" ng-model="report.text" ng-change="saveUnfinishedFieldReport()"></textarea>
             </label>
         </div>
         <div class="list attachments">
@@ -26,17 +26,18 @@
                 </div>
             </div>
             <list show-delete="true">
-                <item ng-repeat="file in attachments" show-delete="true" can-delete="true" on-delete="deleteFile(file)">
+                <item ng-repeat="file in report.attachments" show-delete="true" can-delete="true" on-delete="removeAttachment(file)">
                     {{ file.name }}
                 </item>
             </list>
         </div>
         <div class="row padding">
             <div class="col col-50">
-                <button class="button button-block button-positive">Save</button>
+                <button class="button button-block button-positive" ng-click="saveReport()">Save</button>
             </div>
             <div class="col">
-                <button class="button button-block button-assertive">Reset</button>
+                <button class="button button-block button-assertive" ng-click="resetReport()" ng-show="report.createdAt===null">Reset</button>
+                <button class="button button-block button-assertive" ng-click="deleteReport()" ng-show="report.createdAt!==null">Delete</button>
             </div>
         </div>
     </content>
