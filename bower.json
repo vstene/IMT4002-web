@@ -1,0 +1,25 @@
+{
+  "name": "imt-4002-web",
+  "version": "0.0.0",
+  "authors": [
+    "Vegard Stene <jvstene@gmail.com>"
+  ],
+  "keywords": [
+    "imt4002"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vstene/IMT4002-Project",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-local-storage": "*",
+    "ng-file-upload": "~1.2.7"
+  }
+}
