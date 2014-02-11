@@ -21,6 +21,7 @@
     "jquery": true,
     "laxcomma": true,
     "globals"   : {
+        "_"                    : false,
         "$"                    : false,
         "angular"              : false,
         "browser"              : false,
