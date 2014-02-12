@@ -3,7 +3,8 @@
 angular.module('reporter.controllers')
 .controller('HomeCtrl', function($scope, $state, FieldReportService) {
     $scope.leftButtons = [{
-        type: 'button-icon ion-plus',
+        type: 'button button-icon',
+        content: '<i class="icon ion-ios7-plus-empty">',
         tap: function() {
             $state.go('report-new');
         }

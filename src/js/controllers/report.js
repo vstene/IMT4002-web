@@ -2,6 +2,8 @@
 
 angular.module('reporter.controllers')
 .controller('ReportCtrl', function($scope, $state, $stateParams, FieldReportService) {
+    $scope.isLoading = false;
+
     if ($stateParams && $stateParams.id) {
         $scope.report = FieldReportService.getFieldReport($stateParams.id);
     } else {
@@ -9,7 +11,8 @@ angular.module('reporter.controllers')
     }
 
     $scope.leftButtons = [{
-        type: 'button button-icon ion-arrow-left-c',
+        type: 'button button-icon',
+        content: '<i class="icon ion-ios7-arrow-thin-left"></i>',
         tap: function() {
             $state.go('home');
         }
@@ -32,6 +35,23 @@ angular.module('reporter.controllers')
             if (angular.equals(file, attachment)) {
                 $scope.report.attachments.splice(index, 1);
             }
+        });
+    };
+
+    $scope.getLocation = function() {
+        $scope.isLoading = true;
+
+        window.navigator.geolocation.getCurrentPosition(function(position) {
+            $scope.$apply(function() {
+                $scope.isLoading = false;
+
+                $scope.report.coords = {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
+                };
+
+                FieldReportService.persistUnsavedFieldReport();
+            });
         });
     };
 

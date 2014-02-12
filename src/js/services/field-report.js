@@ -12,6 +12,10 @@ angular.module('reporter.services')
             title: '',
             date: '2013-02-11',
             text: '',
+            coords: {
+                latitude: null,
+                longitude: null
+            },
             attachments: []
         };
     };

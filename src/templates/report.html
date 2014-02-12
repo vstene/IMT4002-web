@@ -14,6 +14,15 @@
                 <input type="date" ng-model="report.date" ng-change="saveUnfinishedFieldReport()">
             </label>
             <label class="item item-input">
+                <div class="col col-40 input-label" style="max-width: 90px">Position</div>
+                <div class="col col-40" ng-show="report.coords.longitude !== null && !isLoading">Registered</div>
+                <div class="col col-40" ng-show="report.coords.longitude === null && !isLoading">Not registered</div>
+                <div class="col col-40" ng-show="isLoading"><i class="button-icon icon ion-loading-a"></i></div>
+                <div class="col col-20">
+                    <button class="button icon ion-pinpoint" ng-click="getLocation()"></button>
+                </div>
+            </label>
+            <label class="item item-input">
                 <textarea placeholder="Report" rows="8" ng-model="report.text" ng-change="saveUnfinishedFieldReport()"></textarea>
             </label>
         </div>
