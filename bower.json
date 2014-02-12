@@ -19,10 +19,13 @@
     "tests"
   ],
   "dependencies": {
-    "angularLocalStorage": "*",
+    "angularLocalStorage": "~0.1.7",
     "ng-file-upload": "~1.2.7",
     "underscore": "~1.6.0",
     "angular-underscore": "*",
     "ionic": "~0.9.24"
+  } ,
+  "resolutions": {
+    "angular": "1.2.10"
   }
 }
