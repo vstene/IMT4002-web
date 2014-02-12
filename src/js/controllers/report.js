@@ -52,12 +52,16 @@ angular.module('reporter.controllers')
     };
 
     $scope.resetReport = function() {
-        $scope.report = FieldReportService.resetUnsavedFieldReport();
+        if (confirm('Are you sure you want to reset the form?')) {
+            $scope.report = FieldReportService.resetUnsavedFieldReport();
+        }
     };
 
     $scope.deleteReport = function() {
-        $scope.report = FieldReportService.deleteFieldReport($scope.report.id);
+        if (confirm('Are you sure you want to delete the report?')) {
+            $scope.report = FieldReportService.deleteFieldReport($scope.report.id);
 
-        $state.go('home');
+            $state.go('home');
+        }
     };
 });

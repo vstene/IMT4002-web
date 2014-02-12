@@ -22,6 +22,7 @@
     "angularLocalStorage": "*",
     "ng-file-upload": "~1.2.7",
     "underscore": "~1.6.0",
-    "angular-underscore": "*"
+    "angular-underscore": "*",
+    "ionic": "~0.9.24"
   }
 }

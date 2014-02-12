@@ -4,7 +4,7 @@
         align-title="center"
         left-buttons="leftButtons"></header-bar>
 
-    <content has-header="true" padding="true">
+    <content has-header="true">
         <div class="list list-inset">
             <label class="item item-input">
                 <input type="text" placeholder="Title" ng-model="report.title" ng-change="saveUnfinishedFieldReport()">
@@ -14,7 +14,7 @@
                 <input type="date" ng-model="report.date" ng-change="saveUnfinishedFieldReport()">
             </label>
             <label class="item item-input">
-                <textarea placeholder="Report" rows="10" ng-model="report.text" ng-change="saveUnfinishedFieldReport()"></textarea>
+                <textarea placeholder="Report" rows="8" ng-model="report.text" ng-change="saveUnfinishedFieldReport()"></textarea>
             </label>
         </div>
         <div class="list attachments">
@@ -33,11 +33,11 @@
         </div>
         <div class="row padding">
             <div class="col col-50">
-                <button class="button button-block button-positive" ng-click="saveReport()">Save</button>
+                <button class="button button-block button-positive" ng-click="saveReport()" ng-show="report.createdAt === null">Create</button><button class="button button-block button-positive" ng-click="saveReport()" ng-show="report.createdAt !== null">Update</button>
             </div>
             <div class="col">
-                <button class="button button-block button-assertive" ng-click="resetReport()" ng-show="report.createdAt===null">Reset</button>
-                <button class="button button-block button-assertive" ng-click="deleteReport()" ng-show="report.createdAt!==null">Delete</button>
+                <button class="button button-block button-assertive" ng-click="resetReport()" ng-show="report.createdAt === null">Reset</button>
+                <button class="button button-block button-assertive" ng-click="deleteReport()" ng-show="report.createdAt !== null">Delete</button>
             </div>
         </div>
     </content>

@@ -4,7 +4,7 @@
         align-title="center"
         left-buttons="leftButtons"></header-bar>
 
-    <content has-header="true" padding="true">
+    <content has-header="true">
         <list>
             <p ng-show="!fieldReports.length">No fields reports have been written.</p>
             <item ng-repeat="fieldReport in fieldReports| orderBy:'createdAt':true track by fieldReport.id"
