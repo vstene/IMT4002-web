@@ -6,7 +6,7 @@ angular.module('reporter.services')
 
     var emptyFieldReport = function() {
         return {
-            id: new Date().valueOf().toString().substr(-12) + Math.random().toString(36).slice(13),
+            id: new Date().valueOf(),
             createdAt: null,
             updatedAt: null,
             title: '',
