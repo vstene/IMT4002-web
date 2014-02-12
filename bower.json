@@ -19,7 +19,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular-local-storage": "*",
-    "ng-file-upload": "~1.2.7"
+    "angularLocalStorage": "*",
+    "ng-file-upload": "~1.2.7",
+    "underscore": "~1.6.0"
+    "angular-underscore": "*",
   }
 }
