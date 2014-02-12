@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install && compass compile"
   },
   "repository": {
     "type": "git",
