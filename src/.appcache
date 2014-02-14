@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# Version 9
+
+CACHE:
+css/app.css
+components/ionic/release/css/ionic.min.css
+components/ionic/release/js/ionic.bundle.js
+components/ionic/release/js/ionic.bundle.js
+components/underscore/underscore.js
+components/angular-underscore/angular-underscore.js
+components/angular-cookies/angular-cookies.js
+components/angularLocalStorage/src/angularLocalStorage.js
+components/ng-file-upload/angular-file-upload.js
+js/app.js
+js/controllers/home.js
+js/controllers/report.js
+js/services/field-report.js
+templates/home.html
+templates/report.html
+
+NETWORK:
+*
