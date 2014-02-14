@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Version 9
+# Version 1
 
 CACHE:
 css/app.css
@@ -15,6 +15,9 @@ js/app.js
 js/controllers/home.js
 js/controllers/report.js
 js/services/field-report.js
+components/ionic/release/fonts/ionicons.ttf?v=1.4.1
+components/ionic/release/fonts/ionicons.woff?v=1.4.1
+components/ionic/release/fonts/ionicons.svg?v=1.4.1
 templates/home.html
 templates/report.html
 
